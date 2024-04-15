@@ -1,6 +1,5 @@
 {
-
-    "version": 2, 
+    "version": 2,
     "builds": [
         {
             "src": "src/index.js",
@@ -10,7 +9,16 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "src/index.js"
+            "dest": "src/index.js",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE",
+                "HEAD",
+                "OPTIONS"
+            ]
         }
     ]
 }

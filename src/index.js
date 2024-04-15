@@ -6,6 +6,11 @@ app.use(cors({
     credential: true,
     methods: ["GET", "POST", "PUT", "DELETE"]
 }))
+app.options("", cors(cors({
+    origin: "*",
+    credential: true,
+    methods: ["GET", "POST", "PUT", "DELETE"]
+})))
 try {
     app.listen(8080, () => {
 
