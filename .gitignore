@@ -1,0 +1,48 @@
+# Node.js related
+node_modules/
+
+# Temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+*.DS_Store
+
+# Environment variables
+.env
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Dependency directories
+bower_components/
+jspm_packages/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Compiled binary files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Package files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Miscellaneous
+.DS_Store
+desktop.ini
