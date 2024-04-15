@@ -1,20 +1,13 @@
-import express from "express"
-
+import express from 'express';
 
 const app = express();
 
-
-
-
-
-
-
 app.get("/", (req, res) => {
-    res.status(200).send("/ is listen ")
+    res.status(200).send("/ is listening");
+});
 
-})
 app.get("/api/v1", (req, res) => {
-    res.status(200).send("requrest to api version for deployments ")
+    res.status(200).send("request to api version for deployments");
+});
 
-})
-export {app}
+export default app;

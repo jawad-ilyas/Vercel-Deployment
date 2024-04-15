@@ -1,22 +1,23 @@
+import cors from "cors";
+import app from "./app";
 
-import cors from "cors"
-import { app } from "./app"
 app.use(cors({
     origin: "*",
-    credential: true,
+    credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"]
-}))
-app.options("", cors(cors({
+}));
+
+app.options("*", cors({
     origin: "*",
-    credential: true,
+    credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"]
-})))
-try {
-    app.listen(8080, () => {
+}));
 
-        console.log("app is listen")
-    })
-} catch (error) {
+const PORT = 8080;
+app.listen(PORT, () => {
+    console.log(`App is listening on port ${PORT}`);
+});
 
-    console.log("error into connection ", error)
-}
+app.on('error', (error) => {
+    console.log("Error in connection ", error);
+});
