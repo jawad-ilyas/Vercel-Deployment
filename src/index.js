@@ -1,7 +1,11 @@
 
 import cors from "cors"
 import { app } from "./app"
-app.use(cors())
+app.use(cors({
+    origin: "*",
+    credential: true,
+    methods: ["GET", "POST", "PUT", "DELETE"]
+}))
 try {
     app.listen(8080, () => {
 
@@ -9,5 +13,5 @@ try {
     })
 } catch (error) {
 
-    console.log("error into connection " , error)
+    console.log("error into connection ", error)
 }
